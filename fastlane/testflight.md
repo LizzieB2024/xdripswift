@@ -115,13 +115,16 @@ This step validates most of your six Secrets and provides error messages if it d
 1. On the right side, click "Run Workflow", and tap the green `Run workflow` button.
 1. Wait, and within a minute or two you should see a green checkmark indicating the workflow succeeded.
 
-## Create App Group
+## Create App Groups
 
-If you have already built Loop via Xcode using this Apple ID, you can skip on to [Add App Group to Bundle Identifiers](#add-app-group-to-bundle-identifiers).
+If you have already built Loop via Xcode using this Apple ID, check the below, and if they exist you can skip on to [Add App Group to Bundle Identifiers](#add-app-group-to-bundle-identifiers).
 
 1. Go to [Register an App Group](https://developer.apple.com/account/resources/identifiers/applicationGroup/add/) on the apple developer site.
 1. For Description, use "Loop App Group".
 1. For Identifier, enter "group.com.TEAMID.loopkit.LoopGroup", subsituting your team id for `TEAMID`.
+1. Click "Continue" and then "Register".
+1. Repeat for the Trio App Group. For Description, use "Trio App Group".
+1. For Identifier, enter "group.org.nightscout.TEAMID.trio.trio-app-group", subsituting your team id for `TEAMID`.
 1. Click "Continue" and then "Register".
 
 ## Add App Group to Bundle Identifiers
@@ -143,6 +146,15 @@ Note 2 - Depending on your build history, you may find some of the Identifiers a
 1. Click "Save".
 1. Click "Confirm".
 1. Remember to do this for each of the identifiers above.
+
+1. For xdripswift only (in addition to the above):
+    * xdripswift
+1. Click on the identifier's name.
+1. On the "App Groups" capabilities, click on the "Configure" button.
+1. Select the "Trio App Group" _(ie in addition to the "Loop App Group")_
+1. Click "Continue".
+1. Click "Save".
+1. Click "Confirm".
 
 ## Create Xdrip4iOS App in App Store Connect
 
